@@ -1,14 +1,22 @@
 class ListsController < ApplicationController
+
   def index
     @lists = List.all
+  end
+
+  def new
     @list = List.new
   end
 
   def create
     @list = List.new(list_params)
     @list.user = current_user
-    @list.save
-    redirect_to lists_path
+
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      render :new
+    end
   end
 
   private
