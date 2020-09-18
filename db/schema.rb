@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_16_001521) do
+ActiveRecord::Schema.define(version: 2020_09_18_010438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,16 +18,16 @@ ActiveRecord::Schema.define(version: 2020_09_16_001521) do
   create_table "item_lists", force: :cascade do |t|
     t.boolean "picked_up"
     t.bigint "item_id", null: false
-    t.bigint "store_id", null: false
+    t.bigint "list_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["item_id"], name: "index_item_lists_on_item_id"
-    t.index ["store_id"], name: "index_item_lists_on_store_id"
+    t.index ["list_id"], name: "index_item_lists_on_list_id"
   end
 
   create_table "item_stores", force: :cascade do |t|
-    t.integer "availability"
     t.integer "price"
+    t.boolean "availability"
     t.bigint "item_id", null: false
     t.bigint "store_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 2020_09_16_001521) do
   end
 
   add_foreign_key "item_lists", "items"
-  add_foreign_key "item_lists", "stores"
+  add_foreign_key "item_lists", "lists"
   add_foreign_key "item_stores", "items"
   add_foreign_key "item_stores", "stores"
   add_foreign_key "lists", "users"
