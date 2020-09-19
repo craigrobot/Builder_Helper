@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2020_09_18_010438) do
     t.bigint "list_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "list_id"
     t.index ["item_id"], name: "index_item_lists_on_item_id"
     t.index ["list_id"], name: "index_item_lists_on_list_id"
   end
