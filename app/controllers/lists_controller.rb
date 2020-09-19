@@ -13,7 +13,7 @@ class ListsController < ApplicationController
     @list.user = current_user
 
     if @list.save
-      redirect_to list_path(@list)
+      redirect_to new_list_item_list_path(@list)
     else
       render :new
     end

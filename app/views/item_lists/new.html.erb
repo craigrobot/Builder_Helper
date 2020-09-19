@@ -1,0 +1,10 @@
+<div class="container">
+  <h1><%=@list.project_name%></h1>
+  <% @list.item_lists.each do |item_list| %>
+    <p><%=item_list.item.name%></p>
+  <% end %>
+  <%= simple_form_for [@list, @item_list] do |f| %>
+    <%= f.association :item %>
+    <%= f.submit "Search", class:"btn btn-outline-primary" %>
+  <% end %>
+</div>
