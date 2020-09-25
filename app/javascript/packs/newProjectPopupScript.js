@@ -12,7 +12,4 @@ const modalTrigger = document.querySelector("#plus-icon");
       modal.classList.remove('modal-hidden');
     })
   }
-      // check if Modal style has a class name called ModalHidden
-        // if true then remove class, if not set the class to ModalHidden
-
 }
