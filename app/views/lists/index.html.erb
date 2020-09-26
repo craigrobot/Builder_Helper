@@ -1,11 +1,12 @@
 <div class="lists-page-container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "background_image.jpg" %>);">
 
   <% @lists.each do |list| %>
-    <%= link_to(new_list_item_list_path(list)) do %>
       <div class="project-card-container">
         <div class="project-card-header">
-          <%= image_tag "kitchen.jpg", class: "project-card-image"%>
-          <!-- link_to("X", list_path(list), method: :delete, data: {confirm: "Are you sure you want to delete"}) %> -->
+          <%= link_to(new_list_item_list_path(list)) do %>
+            <%= image_tag "kitchen.jpg", class: "project-card-image"%>
+          <% end %>
+          <%= link_to("X", list_path(list), class: "project-card-delete", method: :delete, data: {confirm: "Are you sure you want to delete"}) %>
         </div>
         <div class="project-card-body">
           <div>
@@ -18,9 +19,7 @@
         </div>
       </div>
     <% end %>
-  <% end %>
-  <%= link_to "+" ,new_list_path %>
-  <!-- <div class="project-card-container-blank">
 
-      </div> -->
+  <div id="plus-icon">+</div>
 </div>
+<%= render "new_project_popup" %>

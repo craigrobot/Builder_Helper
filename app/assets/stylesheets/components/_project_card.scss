@@ -2,6 +2,7 @@
   // width: 40%;
   // border: 3px solid red;
   border-radius: 10px;
+  position: relative;
 }
 
 .project-card-header {
@@ -25,4 +26,9 @@
 .project-card-image {
   height: 100%;
   width: 100%;
+}
+
+.project-card-delete {
+  position: absolute;
+  left: 20px;
 }
