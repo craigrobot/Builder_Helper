@@ -1,0 +1,28 @@
+<div class="container text-center mt-3 mb-2">
+  <h3><%= @stores.length %> results</h3>
+  <br>
+  <% @stores.each do |store| %>
+    <div class="cards">
+      <div id="store-info">
+        <h3>
+          <%= store.name %>
+        </h3>
+        <p>
+          <%= store.address %>
+        </p>
+        <p>
+          <%= store.phone_number %>
+        </p>
+      </div>
+      <div id="store-distance">
+        <p>
+          1.2 km
+        </p>
+      </div>
+    </div>
+    <div id="item-availability">
+      <%= store.num_of_items_on_list(@list) %>/<%= @list.items.count %> available
+    </div>
+    <br>
+  <% end %>
+</div>
