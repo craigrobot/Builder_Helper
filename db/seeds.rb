@@ -83,7 +83,7 @@ construction_screw_home_depot.store = home_depot
 construction_screw_home_depot.item = construction_screw
 construction_screw_home_depot.save
 
-impact_driver_home_depot = ItemStore.new(availability: false, price: 139)
+impact_driver_home_depot = ItemStore.new(availability: true, price: 139)
 impact_driver_home_depot.store = home_depot
 impact_driver_home_depot.item = impact_driver
 impact_driver_home_depot.save
@@ -98,7 +98,7 @@ corner_bead_home_depot.store = home_depot
 corner_bead_home_depot.item = corner_bead
 corner_bead_home_depot.save
 
-durofoam_home_depot = ItemStore.new(availability: false, price: 23)
+durofoam_home_depot = ItemStore.new(availability: true, price: 23)
 durofoam_home_depot.store = home_depot
 durofoam_home_depot.item = durofoam
 durofoam_home_depot.save
@@ -170,12 +170,12 @@ corner_bead_canadian_tire.store = canadian_tire
 corner_bead_canadian_tire.item = corner_bead
 corner_bead_canadian_tire.save
 
-durofoam_canadian_tire = ItemStore.new(availability: false, price: 23)
+durofoam_canadian_tire = ItemStore.new(availability: true, price: 23)
 durofoam_canadian_tire.store = canadian_tire
 durofoam_canadian_tire.item = durofoam
 durofoam_canadian_tire.save
 
-cgc_sheetrock_canadian_tire = ItemStore.new(availability: false, price: 12)
+cgc_sheetrock_canadian_tire = ItemStore.new(availability: true, price: 12)
 cgc_sheetrock_canadian_tire.store = canadian_tire
 cgc_sheetrock_canadian_tire.item = cgc_sheetrock
 cgc_sheetrock_canadian_tire.save
@@ -185,7 +185,7 @@ dab_canadian_tire.store = canadian_tire
 dab_canadian_tire.item = dab
 dab_canadian_tire.save
 
-tuck_tape_canadian_tire = ItemStore.new(availability: false, price: 5)
+tuck_tape_canadian_tire = ItemStore.new(availability: true, price: 5)
 tuck_tape_canadian_tire.store = canadian_tire
 tuck_tape_canadian_tire.item = tuck_tape
 tuck_tape_canadian_tire.save
@@ -269,7 +269,7 @@ multibit_screwdriver_rona.store = rona
 multibit_screwdriver_rona.item = multibit_screwdriver
 multibit_screwdriver_rona.save
 
-chisel_rona = ItemStore.new(availability: false, price: 11)
+chisel_rona = ItemStore.new(availability: true, price: 11)
 chisel_rona.store = rona
 chisel_rona.item = chisel
 chisel_rona.save
@@ -319,7 +319,7 @@ durofoam_rona.store = rona
 durofoam_rona.item = durofoam
 durofoam_rona.save
 
-cgc_sheetrock_rona = ItemStore.new(availability: false, price: 12)
+cgc_sheetrock_rona = ItemStore.new(availability: true, price: 12)
 cgc_sheetrock_rona.store = rona
 cgc_sheetrock_rona.item = cgc_sheetrock
 cgc_sheetrock_rona.save
