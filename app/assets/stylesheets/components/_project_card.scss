@@ -1,0 +1,28 @@
+.project-card-container {
+  // width: 40%;
+  // border: 3px solid red;
+  border-radius: 10px;
+}
+
+.project-card-header {
+  height: 219px;
+}
+.project-card-body {
+  display: flex;
+  height: 53px;
+  font-size: 20%;
+  padding: 5px;
+}
+
+.project-card-body-date-created {
+  text-align: right;
+}
+// create another css text right for date
+.project-card-body-count {
+  text-align: bottom;
+}
+
+.project-card-image {
+  height: 100%;
+  width: 100%;
+}
