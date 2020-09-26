@@ -1,0 +1,11 @@
+.lists-page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+  row-gap: 10%;
+  width: 100%;
+  margin-bottom: 10%;
+  padding: 15px;
+  // margin button size of margin will be height of bottom make a little bigger
+}
+
