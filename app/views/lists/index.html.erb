@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-all-projects">
   <% @lists.each do |list| %>
     <%= link_to(new_list_item_list_path(list)) do %>
       <div class="card">
@@ -7,4 +7,6 @@
       </div>
     <% end %>
   <% end %>
+  <div id="plus-icon">+</div>
 </div>
+<%= render "new_project_popup" %>

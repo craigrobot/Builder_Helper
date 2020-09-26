@@ -1,9 +1,0 @@
-<div class="container">
-  <h1>Create New Project</h1>
-  <%= simple_form_for (@list) do |f| %>
-    <%= f.input :project_name %>
-    <%= link_to "Cancel", :back, class:"btn btn-outline-primary" %>
-    <%= f.submit "Create", class:"btn btn-outline-primary" %>
-  <% end %>
-  <%= link_to "Search", list_stores(@list) %>
-</div>
