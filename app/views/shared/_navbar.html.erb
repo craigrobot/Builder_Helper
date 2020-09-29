@@ -1,9 +1,12 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to lists_path, class: "navbar-brand" do %>
     <%= image_tag "logobuilder.png" %>
+  <% end %>
+  <%= link_to edit_user_registration_path, class: "navbar-avatar" do %>
+    <% if current_user.present? %>
+      <%= image_tag current_user.picture, size: "40x40", class: "navbar-avatar-img" %>
+    <% else %>
+      <%= image_tag "https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg", size: "16x10", class: "navbar-avatar-img" %>
     <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <% end %> 
 </div>
