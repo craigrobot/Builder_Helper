@@ -11,7 +11,7 @@ puts 'Database clean!'
 
 puts 'Creating data...'
 
-user = User.create!(email: 'vincent@gmail.com', password: '123456')
+user = User.create!(email: 'vincent@gmail.com', password: '123456', picture: "https://randomuser.me/api/portraits/men/32.jpg")
 
 # Showing the user created
 puts "User: #{user.email}"
