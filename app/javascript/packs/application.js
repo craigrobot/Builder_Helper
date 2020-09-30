@@ -28,9 +28,10 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { newProjectPopupScript } from './newProjectPopupScript';
-
+import {initSelect2} from "../plugins/select2"
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   newProjectPopupScript();
+  initSelect2();
 });
