@@ -3,10 +3,10 @@
     <%= image_tag "logobuilder.png" %>
   <% end %>
   <%= link_to edit_user_registration_path, class: "navbar-avatar" do %>
-    <% if current_user.present? %>
+    <% if current_user.present? && current_user.picture %>
       <%= image_tag current_user.picture, size: "40x40", class: "navbar-avatar-img" %>
     <% else %>
       <%= image_tag "https://thumbs.dreamstime.com/b/default-avatar-photo-placeholder-profile-icon-eps-file-easy-to-edit-default-avatar-photo-placeholder-profile-icon-124557887.jpg", size: "16x10", class: "navbar-avatar-img" %>
     <% end %>
-  <% end %> 
+  <% end %>
 </div>
