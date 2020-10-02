@@ -1,7 +1,16 @@
 <div class="container">
+  <%= link_to lists_path do %>
+    <i class="fas fa-arrow-left"></i> <span>My projects</span>
+  <% end %>
   <h1><%= @list.project_name %></h1>
   <% @list.item_lists.each do |item_list| %>
-    <p><%= item_list.item.name %> - <%= link_to "delete", item_list_path(item_list), method: :delete %></p>
+    <div class="card-product">
+      <%= image_tag "hammer.png" %>
+        <p><%= item_list.item.name %></p>
+        <%= link_to item_list_path(item_list), method: :delete do %> 
+          <%= image_tag "red_x.png", class: "red-cross" %>
+        <% end %>
+    </div>
   <% end %>
   <%= simple_form_for [@list, @item_list] do |f| %>
     <%= f.association :item, input_html: {class: "select2"} %>
