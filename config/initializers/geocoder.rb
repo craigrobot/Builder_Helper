@@ -7,7 +7,7 @@ Geocoder.configure(
   # use_https: false,           # use HTTPS for lookup requests? (if supported)
   # http_proxy: nil,            # HTTP proxy server (user:pass@host:port)
   # https_proxy: nil,           # HTTPS proxy server (user:pass@host:port)
-  # api_key: nil,               # API key for geocoding service
+  api_key: "pk.eyJ1IjoibDNibGFuYzE5OTAiLCJhIjoiY2tmb2phMnhiMGY3NTJ5bzBxNTJsNDg3YSJ9.caHRqTK8yv1lrQpgjD6W4w",               # API key for geocoding service
   # cache: nil,                 # cache object (must respond to #[], #[]=, and #del)
   # cache_prefix: 'geocoder:',  # prefix (string) to use for all cache keys
 
