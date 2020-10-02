@@ -27,7 +27,11 @@ import "bootstrap";
 
 // Internal imports
 import { initMapbox } from '../plugins/init_mapbox';
+import { newProjectPopupScript } from './newProjectPopupScript';
+import {initSelect2} from "../plugins/select2";
 
 document.addEventListener('turbolinks:load', () => {
+  newProjectPopupScript();
+  initSelect2();
   initMapbox();
 });
