@@ -1,4 +1,5 @@
 class ItemListsController < ApplicationController
+  
   def new
     @list = List.find(params[:list_id])
     @item_list = ItemList.new
