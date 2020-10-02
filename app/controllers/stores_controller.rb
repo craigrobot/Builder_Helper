@@ -5,11 +5,8 @@ class StoresController < ApplicationController
 
     @list = List.find(params[:list_id])
 
-    @markers = @stores.geocoded.map do |store|
-      {
-        lat: store.latitude,
-        lng: store.longitude
-      }
+    @markers = @stores.map do |store|
+      { lat: store.latitude, lng: store.longitude, infoWindow: render_to_string(partial: "info_window", locals: { store: store }) }
     end
   end
 end
