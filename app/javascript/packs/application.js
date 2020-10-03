@@ -29,9 +29,11 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { newProjectPopupScript } from './newProjectPopupScript';
 import {initSelect2} from "../plugins/select2";
+import {scrollButtonStoreResults} from "./scrollButtonStoreResults";
 
 document.addEventListener('turbolinks:load', () => {
   newProjectPopupScript();
+  scrollButtonStoreResults();
   initSelect2();
   initMapbox();
 });
