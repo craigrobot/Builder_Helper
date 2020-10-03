@@ -1,7 +1,7 @@
 export const newProjectPopupScript = () => {
   console.log("Script Fired")
 // target + icon inside DOM store it in variable called modalTrigger (querySelector)
-const modalTrigger = document.querySelector("#plus-icon");
+const modalTrigger = document.querySelector(".plus-icon");
 // create if/else statement that checks if modalTrigger variable has content inside of it
   if ( modalTrigger ) {
     console.log( modalTrigger, "modalTrigger")
