@@ -32,7 +32,6 @@ import { initSelect2 } from "../plugins/select2";
 import { scrollButtonStoreResults } from "./scrollButtonStoreResults";
 import { searchLocation } from "../plugins/search_with_location";
 
-
 document.addEventListener('turbolinks:load', () => {
   newProjectPopupScript();
   scrollButtonStoreResults();

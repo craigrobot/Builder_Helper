@@ -9,3 +9,14 @@
   // margin button size of margin will be height of bottom make a little bigger
 }
 
+.new-project-container {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='11' ry='11' stroke='%23333333FF' stroke-width='6' stroke-dasharray='20%2c 28' stroke-dashoffset='33' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 11px;
+  height: 272px;
+  display: flex;
+}
+
+.plus-icon {
+  margin: auto;
+}
+
