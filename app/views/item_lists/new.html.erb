@@ -1,6 +1,20 @@
 <div class="container">
-  <%= link_to lists_path do %>
-    <i class="fas fa-arrow-left"></i> <span>My projects</span>
+  <div class="projects-link">
+    <%= link_to lists_path do %>
+      <i class="fas fa-arrow-left text-secondary"></i> <span class="text-secondary">My projects</span>
+    <% end %>
+  </div>
+  <div class="project-name">
+    <h5><%= @list.project_name %></h5>
+  </div>
+    <% @list.item_lists.each do |item_list| %>
+  <div class="card-product">
+    <%= image_tag "hammer.png" %>
+      <h6><%= item_list.item.name %></h6>
+      <%= link_to item_list_path(item_list), method: :delete do %> 
+        <%= image_tag "red_x.png", class: "red-cross" %>
+      <% end %>
+  </div>
   <% end %>
   <h1><%= @list.project_name %></h1>
   <% @list.item_lists.each do |item_list| %>
