@@ -1,0 +1,57 @@
+.projects-link {
+   padding: 20px;
+   color: grey;
+}
+
+.project-name {
+    margin-left: 6px;
+    margin-bottom: 48px;
+}
+
+hr { width:95%; height:0.5px; opacity: 0.25; background: grey;}
+
+.btn-search {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    background-color: #F6E172;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 100px;
+    font-family: "Anton", "Helvetica", "sans-serif";
+    font-size: small;
+}
+
+.search-bar-container {
+    width: 95%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    form {
+        position: relative;
+        width: 80%;            
+    }
+}
+
+#plus-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    bottom: -3px;
+    right: -55px;
+    background-color: white;
+    color: black;
+    border-color: black;
+    font-size: 36px;
+    height: 36px;
+    width: 36px;
+    padding: 0;
+    background-image: url(https://img.favpng.com/24/14/7/symbol-plus-and-minus-signs-computer-icons-png-favpng-dRCUHs9fHMk7EaQLC0J32Vkhj.jpg);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#plus-button::after {
+        content: '+';
+      }
