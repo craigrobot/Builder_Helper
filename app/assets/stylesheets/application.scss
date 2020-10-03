@@ -14,9 +14,10 @@
 @import "components/index";
 @import "pages/index";
 
-@import 'mapbox-gl/dist/mapbox-gl';
+@import "mapbox-gl/dist/mapbox-gl.css";
 
 body {
   padding-bottom: 70px;
+  padding-top: 71px;
   background-color: white;
 }

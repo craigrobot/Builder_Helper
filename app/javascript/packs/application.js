@@ -30,10 +30,12 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { newProjectPopupScript } from './newProjectPopupScript';
 import { initSelect2 } from "../plugins/select2";
 import { scrollButtonStoreResults } from "./scrollButtonStoreResults";
+import { searchLocation } from "../plugins/search_with_location";
 
 document.addEventListener('turbolinks:load', () => {
   newProjectPopupScript();
   scrollButtonStoreResults();
   initSelect2();
   initMapbox();
+  searchLocation();
 });
