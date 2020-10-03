@@ -1,6 +1,8 @@
 <div class="map-store-container">
 <div id="map"
+
      style="width: 100%; height: 600px; z-index: -1;"
+
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
@@ -29,7 +31,7 @@
       </div>
       <div class="store-distance">
         <p>
-          1.2 km
+          <%= store.distance_to([@lat, @long]).round(1) %> Km
         </p>
       </div>
       <div class="item-availability">
