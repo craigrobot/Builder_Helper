@@ -16,10 +16,10 @@ user = User.create!(email: 'vincent@gmail.com', password: '123456', picture: "ht
 # Showing the user created
 puts "User: #{user.email}"
 
-home_depot = Store.create!(name: 'Home Depot', phone_number: '(514)490-8030', address_line_1: '100 rue Beaubien Ouest', address_line_2: 'Montreal, QC, H2S 3S1')
-canadian_tire = Store.create!(name: 'Canadian Tire', phone_number: '(514)521-8888', address_line_1: '3025, rue Sherbrooke Est', address_line_2: 'Montreal, QC, H1W 1B2')
-la_boite_a_clous = Store.create!(name: 'La Boite A Clous', phone_number: '(514)439-4858', address_line_1: '750 Rue Beaubien E', address_line_2: 'Montréal, QC H2S 1S7')
-rona = Store.create!(name: 'Rona', phone_number: '(514)521-9580', address_line_1: '1473 Avenue Laurier E', address_line_2: 'Montréal, QC H2J 1H8')
+home_depot = Store.create!(name: 'Home Depot', phone_number: '(514) 490-8030', address_line_1: '100 rue Beaubien Ouest', address_line_2: 'Montreal, QC, H2S 3S1')
+canadian_tire = Store.create!(name: 'Canadian Tire', phone_number: '(514) 521-8888', address_line_1: '3025, rue Sherbrooke Est', address_line_2: 'Montreal, QC, H1W 1B2')
+la_boite_a_clous = Store.create!(name: 'La Boite A Clous', phone_number: '(514) 439-4858', address_line_1: '750 Rue Beaubien Est', address_line_2: 'Montréal, QC H2S 1S7')
+rona = Store.create!(name: 'Rona', phone_number: '(514) 521-9580', address_line_1: '1473 Avenue Laurier Est', address_line_2: 'Montréal, QC H2J1H8')
 
 # Showing the stores created
 # stores.each do |store|

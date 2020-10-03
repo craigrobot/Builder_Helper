@@ -16,15 +16,20 @@
       <% end %>
   </div>
   <% end %>
-  <hr>
-  <div class="search-bar-container">
-    <%= simple_form_for [@list, @item_list] do |f| %>
-      <%= f.association :item, input_html: {class: "select2"}, label: "New item" %>
-      <%= f.submit "", class:"btn", id: "plus-button" do %>
-      <p>+</p>
-      <% end %> 
-    <% end %> 
-  </div>
-  <hr>
-  <%= link_to "Find stores", list_stores_path(@list), class:"btn btn-search" %>
+  <h1><%= @list.project_name %></h1>
+  <% @list.item_lists.each do |item_list| %>
+    <div class="card-product">
+      <%= image_tag "hammer.png" %>
+        <p><%= item_list.item.name %></p>
+        <%= link_to item_list_path(item_list), method: :delete do %> 
+          <%= image_tag "red_x.png", class: "red-cross" %>
+        <% end %>
+    </div>
+  <% end %>
+  <%= simple_form_for [@list, @item_list] do |f| %>
+    <%= f.association :item, input_html: {class: "select2"} %>
+    <%= f.submit "Add Item", class:"btn btn-primary" %>
+  <% end %>
+  <br>
+  <%= link_to "Search", list_stores_path(@list), class:"btn btn-warning", id:"search_store_button" %>
 </div>
