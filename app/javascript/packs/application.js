@@ -28,10 +28,12 @@ import "bootstrap";
 // Internal imports
 import { initMapbox } from '../plugins/init_mapbox';
 import { newProjectPopupScript } from './newProjectPopupScript';
-import {initSelect2} from "../plugins/select2";
+import { initSelect2 } from "../plugins/select2";
+import { searchLocation } from "../plugins/search_with_location";
 
 document.addEventListener('turbolinks:load', () => {
   newProjectPopupScript();
   initSelect2();
   initMapbox();
+  searchLocation();
 });
