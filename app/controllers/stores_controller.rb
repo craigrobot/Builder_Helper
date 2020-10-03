@@ -1,7 +1,10 @@
 class StoresController < ApplicationController
   
   def index
-    @stores = Store.joins({items: :lists}).where(lists: {id: params[:list_id]}, item_stores: {availability: true}).uniq
+    @lat = params[:lat] || 45.519396941418556
+    @long = params[:long] || -73.55877731427543
+
+    @stores = Store.near([@lat, @long]).joins({items: :lists}).where(lists: {id: params[:list_id]}, item_stores: {availability: true}).uniq
 
     @list = List.find(params[:list_id])
 

@@ -5,7 +5,7 @@ const searchLocation = () => {
     searchButton.addEventListener("click", (event) => {
       event.preventDefault();
       navigator.geolocation.getCurrentPosition((position) => {
-        
+        window.location.href = `${searchButton.getAttribute("href")}?lat=${position.coords.latitude}&long=${position.coords.longitude}`;
       });
     });
   }
