@@ -9,7 +9,9 @@
   </div>
     <% @list.item_lists.each do |item_list| %>
   <div class="card-product">
-    <%= image_tag "hammer.png" %>
+    <% if item_list.item.image_url %>
+      <%= image_tag item_list.item.image_url %>
+    <% end %>
       <h6><%= item_list.item.name %></h6>
       <%= link_to item_list_path(item_list), method: :delete do %> 
         <%= image_tag "red_x.png", class: "red-cross" %>
