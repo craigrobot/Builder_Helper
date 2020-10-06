@@ -25,12 +25,17 @@ require("channels")
 // External imports
 import "bootstrap";
 
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+// Internal imports
+import { initMapbox } from '../plugins/init_mapbox';
 import { newProjectPopupScript } from './newProjectPopupScript';
+import { initSelect2 } from "../plugins/select2";
+import { scrollButtonStoreResults } from "./scrollButtonStoreResults";
+import { searchLocation } from "../plugins/search_with_location";
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
   newProjectPopupScript();
+  scrollButtonStoreResults();
+  initSelect2();
+  initMapbox();
+  searchLocation();
 });

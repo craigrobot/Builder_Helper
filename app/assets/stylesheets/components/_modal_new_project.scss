@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: center;
     background: rgba(0,0,0,0.7);
-    margin-bottom: 200px;
 
     &.modal-hidden {
       z-index: -1;
@@ -18,11 +17,13 @@
 .container-create-project-popup {
   display: flex;
   flex-direction: column;
+  position: absolute;
   background-color: #E7E7E7;
   border-radius: 10px;
   font-family: $headers-font;
   padding-top: 40px;
   width: 80%;
+  top: 200px;
 
   form {
     display: flex;
@@ -76,12 +77,6 @@
       letter-spacing: 0.1em;
     }
   }
-}
-
-#plus-icon {
-  width: 100px;
-  height: 100px;
-  font-size: 18px;
 }
 
 .modal-hidden {

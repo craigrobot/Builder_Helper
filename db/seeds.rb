@@ -16,30 +16,30 @@ user = User.create!(email: 'vincent@gmail.com', password: '123456', picture: "ht
 # Showing the user created
 puts "User: #{user.email}"
 
-home_depot = Store.create!(name: 'Home Depot', phone_number: '514-490-8030', address: '100 rue Beaubien Ouest, Montreal, QC, H2S 3S1')
-canadian_tire = Store.create!(name: 'Canadian Tire', phone_number: '514-521-8888', address: '3025, rue Sherbrooke Est, H1W 1B2')
-la_boite_a_clous = Store.create!(name: 'La Boite A Clous', phone_number: '514-439-4858', address: '750 Rue Beaubien E, Montréal, QC H2S 1S7')
-rona = Store.create!(name: 'Rona', phone_number: '514-521-9580', address: '1473 Avenue Laurier E, Montréal, QC H2J 1H8')
+home_depot = Store.create!(name: 'Home Depot', phone_number: '(514) 490-8030', address_line_1: '100 rue Beaubien Ouest', address_line_2: 'Montreal, QC, H2S 3S1')
+canadian_tire = Store.create!(name: 'Canadian Tire', phone_number: '(514) 521-8888', address_line_1: '3025, rue Sherbrooke Est', address_line_2: 'Montreal, QC, H1W 1B2')
+la_boite_a_clous = Store.create!(name: 'La Boite A Clous', phone_number: '(514) 439-4858', address_line_1: '750 Rue Beaubien Est', address_line_2: 'Montréal, QC H2S 1S7')
+rona = Store.create!(name: 'Rona', phone_number: '(514) 521-9580', address_line_1: '1473 Avenue Laurier Est', address_line_2: 'Montréal, QC H2J1H8')
 
 # Showing the stores created
 # stores.each do |store|
 #   puts store
 # end
 
-multibit_screwdriver = Item.create!(name: 'Multibit Screwdriver', description: '11-in-1, Comfort Grip')
-chisel = Item.create!(name: 'Chisel', description: '4 oz, Steel')
-hammer = Item.create!(name: 'Hammer', description: '20 oz, Titanium')
-framing_stud = Item.create!(name: 'Framing Stud', description: '2 in. x 3 in. x 8 ft., Wood')
-plywood_seathing = Item.create!(name: 'Plywood Sheathing', description: '11/32 in. x 4 ft. x 8 ft., Wood')
-sande_plywood = Item.create!(name: 'Sande Plywood', description: '0.709 in. x 48 in. x 96 in., Wood')
-construction_screw = Item.create!(name: 'Construction Screw', description: '200 x 3 in., Steel')
-impact_driver = Item.create!(name: 'Impact Driver Cordless', description: '20-Volt, Power Tool')
-circular_saw = Item.create!(name: 'Circular Saw with Brake', description: '20-Volt, Power Tool')
-corner_bead = Item.create!(name: 'Corner Bead Trim', description: '1-1/4 in. x 8 ft., Drywall Metal')
-durofoam = Item.create!(name: 'Durofoam', description: '96 in. X 48 in. X 1.5 in., EPS Rigid Insulation')
-cgc_sheetrock = Item.create!(name: 'CGC Sheetrock', description: '1/2 in. x 4 ft. x 8 ft., UltraLight Drywall Panel')
-dab = Item.create!(name: 'DAB', description: '1/2 in. x 4 ft. x 8 ft., Wall Repair Patch Kit')
-tuck_tape = Item.create!(name: 'Tuck Tape', description: '2.4-in. x 208 ft., Multi-Purpose Tape')
+multibit_screwdriver = Item.create!(name: 'Multibit Screwdriver', description: '11-in-1, Comfort Grip', image_url: "https://www.stanleytools.com/NA/product/images/3000x3000x96/68-010/68-010_1.jpg")
+chisel = Item.create!(name: 'Chisel', description: '4 oz, Steel', image_url: "https://assets.leevalley.com/Size4/10049/05S2116-veritas-pm-v11-bench-chisel-1-inch-f-01.jpg")
+hammer = Item.create!(name: 'Hammer', description: '20 oz, Titanium', image_url: "https://images-na.ssl-images-amazon.com/images/I/71tTWyypTKL._AC_SY355_.jpg")
+framing_stud = Item.create!(name: 'Framing Stud', description: '2 in. x 3 in. x 8 ft., Wood', image_url: "https://www.gyprocktrade.com.au/PublishingImages/Product%20Images/Rondo/Steel-Stud-Track-Wall-Framing-System.jpg")
+plywood_seathing = Item.create!(name: 'Plywood Sheathing', description: '11/32 in. x 4 ft. x 8 ft., Wood', image_url: "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/fetch/NexGen/ContentPage/03-2019-Plywood-VisNav-Types-sanded.jpg")
+sande_plywood = Item.create!(name: 'Sande Plywood', description: '0.709 in. x 48 in. x 96 in., Wood', image_url: "https://da.lowes.ca/webassets/images/161485_MainImage_001_m.jpg")
+construction_screw = Item.create!(name: 'Construction Screw', description: '200 x 3 in., Steel', image_url: "https://images.homedepot-static.com/productImages/afc6d0f0-d726-4d30-abef-f354ba9fcdb8/svn/grip-rite-wood-screws-312gcs10bk-64_1000.jpg")
+impact_driver = Item.create!(name: 'Impact Driver Cordless', description: '20-Volt, Power Tool', image_url: "https://www.dewalt.com/NA/product/images/3000x3000x96/DCF801B/DCF801B_1.jpg")
+circular_saw = Item.create!(name: 'Circular Saw with Brake', description: '20-Volt, Power Tool', image_url: "https://www.dewalt.com/NA/product/images/3000x3000x96/DW384/DW384_1.jpg")
+corner_bead = Item.create!(name: 'Corner Bead Trim', description: '1-1/4 in. x 8 ft., Drywall Metal', image_url: "https://images.homedepot-static.com/productImages/49907ed7-6185-47df-b6a5-fddc816925fa/svn/clarkdietrich-drywall-corner-bead-726955-64_1000.jpg")
+durofoam = Item.create!(name: 'Durofoam', description: '96 in. X 48 in. X 1.5 in., EPS Rigid Insulation', image_url: "https://www.plastifab.com/img/products/durofoam-product.png")
+cgc_sheetrock = Item.create!(name: 'CGC Sheetrock', description: '1/2 in. x 4 ft. x 8 ft., UltraLight Drywall Panel', image_url: "https://rmlandry.com/sites/castlermlandryson/images/products/cgc_water_res_2023_cgc-1665_400.e2autover-201004161150.jpg")
+dab = Item.create!(name: 'DAB', description: '1/2 in. x 4 ft. x 8 ft., Wall Repair Patch Kit', image_url: "https://www.rokinvapes.com/wp-content/uploads/2019/02/dabtool.jpg")
+tuck_tape = Item.create!(name: 'Tuck Tape', description: '2.4-in. x 208 ft., Multi-Purpose Tape', image_url: "https://images11.palcdn.com/hlr-system/WebPhotos/86/866/8661/8661829.jpg")
 
 # Showing the items created
 # items.each do |item|
@@ -78,7 +78,7 @@ sande_plywood_home_depot.store = home_depot
 sande_plywood_home_depot.item = sande_plywood
 sande_plywood_home_depot.save
 
-construction_screw_home_depot = ItemStore.new(availability: true, price: 6)  
+construction_screw_home_depot = ItemStore.new(availability: true, price: 6)
 construction_screw_home_depot.store = home_depot
 construction_screw_home_depot.item = construction_screw
 construction_screw_home_depot.save
@@ -150,7 +150,7 @@ sande_plywood_canadian_tire.store = canadian_tire
 sande_plywood_canadian_tire.item = sande_plywood
 sande_plywood_canadian_tire.save
 
-construction_screw_canadian_tire = ItemStore.new(availability: true, price: 6)  
+construction_screw_canadian_tire = ItemStore.new(availability: true, price: 6)
 construction_screw_canadian_tire.store = canadian_tire
 construction_screw_canadian_tire.item = construction_screw
 construction_screw_canadian_tire.save
@@ -222,7 +222,7 @@ sande_plywood_la_boite_a_clous.store = la_boite_a_clous
 sande_plywood_la_boite_a_clous.item = sande_plywood
 sande_plywood_la_boite_a_clous.save
 
-construction_screw_la_boite_a_clous = ItemStore.new(availability: true, price: 6)  
+construction_screw_la_boite_a_clous = ItemStore.new(availability: true, price: 6)
 construction_screw_la_boite_a_clous.store = la_boite_a_clous
 construction_screw_la_boite_a_clous.item = construction_screw
 construction_screw_la_boite_a_clous.save
@@ -294,7 +294,7 @@ sande_plywood_rona.store = rona
 sande_plywood_rona.item = sande_plywood
 sande_plywood_rona.save
 
-construction_screw_rona = ItemStore.new(availability: true, price: 6)  
+construction_screw_rona = ItemStore.new(availability: true, price: 6)
 construction_screw_rona.store = rona
 construction_screw_rona.item = construction_screw
 construction_screw_rona.save

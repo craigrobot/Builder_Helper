@@ -1,28 +1,44 @@
-<div class="container text-center mt-3 mb-2">
-  <h3><%= @stores.length %> results</h3>
+<div class="map-store-container">
+<div id="map"
+
+     style="width: 100%; height: 600px; z-index: 0;"
+
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
+<div class="scroll-store-container collapsed text-center mt-3 mb-2">
+  <div class="scroll-button">
+  </div>
+  <h3 class="store-results-number"><%= @stores.length %> results</h3>
+
   <br>
   <% @stores.each do |store| %>
-    <div class="cards">
-      <div id="store-info">
+    <div class="store-card">
+      <div class="store-info">
         <h3>
           <%= store.name %>
         </h3>
-        <p>
-          <%= store.address %>
+        <p class="store-address-street">
+          <%= store.address_line_1 %>
         </p>
-        <p>
-          <%= store.phone_number %>
+        <p class="store-address-city">
+          <%= store.address_line_2 %>
         </p>
-      </div>
-      <div id="store-distance">
-        <p>
-          1.2 km
+        <p class="store-phone-number">
+          Tel.: <%= store.phone_number %>
         </p>
       </div>
-    </div>
-    <div id="item-availability">
-      <%= store.num_of_items_on_list(@list) %>/<%= @list.items.count %> available
+      <div class="store-distance">
+        <p>
+          <%= store.distance_to([@lat, @long]).round(1) %> Km
+        </p>
+      </div>
+      <div class="item-availability">
+        <%= store.num_of_items_on_list(@list) %>/<%= @list.items.count %> items
+      </div>
     </div>
     <br>
   <% end %>
+</div>
 </div>

@@ -1,12 +1,32 @@
 <div class="container">
-  <h1><%= @list.project_name %></h1>
-  <% @list.item_lists.each do |item_list| %>
-    <p><%= item_list.item.name %> - <%= link_to "delete", item_list_path(item_list), method: :delete %></p>
+  <div class="projects-link">
+    <%= link_to lists_path do %>
+      <i class="fas fa-arrow-left text-secondary"></i> <span class="text-secondary">My projects</span>
+    <% end %>
+  </div>
+  <div class="project-name">
+    <h5><%= @list.project_name %></h5>
+  </div>
+    <% @list.item_lists.each do |item_list| %>
+  <div class="card-product">
+    <% if item_list.item.image_url %>
+      <%= image_tag item_list.item.image_url %>
+    <% end %>
+      <h6><%= item_list.item.name %></h6>
+      <%= link_to item_list_path(item_list), method: :delete do %> 
+        <%= image_tag "red_x.png", class: "red-cross" %>
+      <% end %>
+  </div>
   <% end %>
-  <%= simple_form_for [@list, @item_list] do |f| %>
-    <%= f.association :item %>
-    <%= f.submit "Add Item", class:"btn btn-outline-primary" %>
-  <% end %>
-  <br>
-  <%= link_to "Search", list_stores_path(@list), class:"btn btn-outline-primary" %>
+  <hr>
+  <div class="search-bar-container">
+    <%= simple_form_for [@list, @item_list] do |f| %>
+      <%= f.association :item, input_html: {class: "select2"}, label: "New item" %>
+      <%= f.submit "", class:"btn", id: "plus-button" do %>
+      <p>+</p>
+      <% end %> 
+    <% end %> 
+  </div>
+  <hr>
+  <%= link_to "Find stores", list_stores_path(@list), class:"btn btn-search" %>
 </div>

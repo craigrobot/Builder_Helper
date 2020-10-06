@@ -1,7 +1,12 @@
 <div class="lists-page-container" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "background_image.jpg" %>);">
-
   <% @lists.each do |list| %>
-      <div class="project-card-container">
+      <% if @lists.length == 0 %>
+        <div>
+        </div>
+        <div class="new-project-container">
+          <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601756034/heroicons-solid_plus-sm_sk5ckm.svg" alt="">
+        </div>
+      <% end  %>
         <div class="project-card-header">
           <%= link_to(new_list_item_list_path(list)) do %>
             <%= image_tag "kitchen.jpg", class: "project-card-image"%>
@@ -16,10 +21,13 @@
           <p class="project-card-body-date-created">9/5/20</p>
         </div>
       </div>
-    <% end %>
-    <div class="project-card-blank">
-      <div id="plus-icon">+</div>
     </div>
+    <% if index == 0 %>
+      <div class="new-project-container">
+        <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601666956/Group_rd1vco.svg" alt="">
+      </div>
+    <% end %>
+  <% end %>
 </div>
 <%= render "new_project_popup" %>
 <!-- inputs for date, count, name needed -->
