@@ -1,7 +1,4 @@
 .project-card-container {
-  // width: 40%;
-  // border: 3px solid red;
-  border-radius: 10px;
   position: relative;
 }
 
@@ -10,26 +7,61 @@
 }
 .project-card-body {
   background-color: white;
-  display: flex;
+  position: relative;
   height: 53px;
   font-size: 20%;
   padding: 5px;
+  border-radius: 0 0 10px 10px;
+}
+
+.project-card-column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.project-card-body-name {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  margin-bottom: 0;
+  width: 60px;
 }
 
 .project-card-body-date-created {
-  text-align: right;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin-bottom: 0;
 }
-// create another css text right for date
 .project-card-body-count {
-  text-align: bottom;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  margin-bottom: 0;
 }
 
 .project-card-image {
   height: 100%;
   width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 
 .project-card-delete {
   position: absolute;
-  left: 20px;
+  left: 4px;
+  top: 3px;
+}
+
+.project-card-blank {
+  display: flex;
+  height: 272px;
+  width: 130.5px;
+  border: 1px solid #000000;
+  border-style: dashed;
+  border-radius: 10px;
+}
+
+#plus-icon {
+  // not sure how to increase size of plus and center
 }

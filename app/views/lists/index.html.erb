@@ -6,20 +6,21 @@
           <%= link_to(new_list_item_list_path(list)) do %>
             <%= image_tag "kitchen.jpg", class: "project-card-image"%>
           <% end %>
-          <%= link_to("X", list_path(list), class: "project-card-delete", method: :delete, data: {confirm: "Are you sure you want to delete"}) %>
+          <%= link_to( list_path(list), class: "project-card-delete", method: :delete, data: {confirm: "Are you sure you want to delete"}) do %>
+          <%= image_tag "delete_icon.png"%>
+          <% end %>
         </div>
         <div class="project-card-body">
-          <div>
-            <p class="project-card-body-name"><%= list.project_name %></p>
-            <p class="project-card-body-count">22</p>
-          </div>
-          <div>
-            <p class="project-card-body-date-created">9/5/20</p>
-          </div>
+          <p class="project-card-body-name"><%= list.project_name %></p>
+          <p class="project-card-body-count">22</p>
+          <p class="project-card-body-date-created">9/5/20</p>
         </div>
       </div>
     <% end %>
-
-  <div id="plus-icon">+</div>
+    <div class="project-card-blank">
+      <div id="plus-icon">+</div>
+    </div>
 </div>
 <%= render "new_project_popup" %>
+<!-- inputs for date, count, name needed -->
+<!-- add opacity to background image -->
