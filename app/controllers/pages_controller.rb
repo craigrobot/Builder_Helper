@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   private
 
   def check_signed_in
-    redirect_to lists_path if signed_in?
+  #   redirect_to lists_path if signed_in?
   end
 
 end
