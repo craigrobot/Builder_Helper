@@ -497,4 +497,11 @@ tuck_tape_bedroom_project.list = bedroom_project
 tuck_tape_bedroom_project.item = tuck_tape
 tuck_tape_bedroom_project.save
 
+hammer = Tool.create(name: "hammer")
+wood = Material.create(name: "wood")
+
+picnic_table = SampleProject.create(title: "Picnic Table", level: "Easy", image:"Cloudinary", instructions: "1. do this; 2. do this 3. Do this;" )
+SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: wood.id)
+SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: hammer.id)
+
 puts 'Data created!'
