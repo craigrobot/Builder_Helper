@@ -345,8 +345,8 @@ tuck_tape_rona.save
 #   puts "Item Store: #{item.store.name} - availability: #{item.availability} - #{item.price}$"
 # end
 
-bathroom_project = List.create!(project_name: 'Renovating the bathroom', user: user)
-bedroom_project = List.create!(project_name: 'Renovating the bedroom', user: user)
+bathroom_project = List.create!(project_name: 'Renovating the bathroom', user: user, project_item_count: 15)
+bedroom_project = List.create!(project_name: 'Renovating the bedroom', user: user, project_item_count: 12)
 
 # Showing the lists created
 # lists.each do |list|
