@@ -6,6 +6,7 @@ Store.destroy_all
 Item.destroy_all
 List.destroy_all
 User.destroy_all
+SampleProject.destroy_all
 
 puts 'Database clean!'
 
@@ -496,5 +497,12 @@ tuck_tape_bedroom_project = ItemList.new(picked_up: false)
 tuck_tape_bedroom_project.list = bedroom_project
 tuck_tape_bedroom_project.item = tuck_tape
 tuck_tape_bedroom_project.save
+
+hammer = Tool.create(name: "hammer")
+wood = Material.create(name: "wood")
+
+picnic_table = SampleProject.create(title: "Picnic Table", level: "Easy", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/65250-8848330_hazeno.jpg", instructions: "1. do this; 2. do this 3. Do this;" )
+SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: wood.id)
+SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: hammer.id)
 
 puts 'Data created!'

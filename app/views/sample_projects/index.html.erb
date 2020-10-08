@@ -1,0 +1,9 @@
+<div class="project-card-container">
+  <div class="card">
+    <% @sample_projects.each do |sample_project| %>
+      <%= link_to(sample_project_path(sample_project)) do %>
+        <%= image_tag(sample_project.image, size: "80x80") %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_06_232337) do
+ActiveRecord::Schema.define(version: 2020_10_07_002850) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +54,40 @@ ActiveRecord::Schema.define(version: 2020_10_06_232337) do
     t.index ["user_id"], name: "index_lists_on_user_id"
   end
 
+  create_table "materials", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sample_project_materials", force: :cascade do |t|
+    t.bigint "sample_project_id", null: false
+    t.bigint "material_id", null: false
+    t.integer "count"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["material_id"], name: "index_sample_project_materials_on_material_id"
+    t.index ["sample_project_id"], name: "index_sample_project_materials_on_sample_project_id"
+  end
+
+  create_table "sample_project_tools", force: :cascade do |t|
+    t.bigint "sample_project_id", null: false
+    t.bigint "tool_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["sample_project_id"], name: "index_sample_project_tools_on_sample_project_id"
+    t.index ["tool_id"], name: "index_sample_project_tools_on_tool_id"
+  end
+
+  create_table "sample_projects", force: :cascade do |t|
+    t.string "title"
+    t.integer "level"
+    t.string "image"
+    t.string "instructions"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "stores", force: :cascade do |t|
     t.string "name"
     t.string "phone_number"
@@ -62,6 +97,12 @@ ActiveRecord::Schema.define(version: 2020_10_06_232337) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "address_line_1"
     t.string "address_line_2"
+  end
+
+  create_table "tools", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -85,4 +126,8 @@ ActiveRecord::Schema.define(version: 2020_10_06_232337) do
   add_foreign_key "item_stores", "items"
   add_foreign_key "item_stores", "stores"
   add_foreign_key "lists", "users"
+  add_foreign_key "sample_project_materials", "materials"
+  add_foreign_key "sample_project_materials", "sample_projects"
+  add_foreign_key "sample_project_tools", "sample_projects"
+  add_foreign_key "sample_project_tools", "tools"
 end
