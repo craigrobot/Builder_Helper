@@ -6,6 +6,7 @@ Store.destroy_all
 Item.destroy_all
 List.destroy_all
 User.destroy_all
+SampleProject.destroy_all
 
 puts 'Database clean!'
 
@@ -345,8 +346,8 @@ tuck_tape_rona.save
 #   puts "Item Store: #{item.store.name} - availability: #{item.availability} - #{item.price}$"
 # end
 
-bathroom_project = List.create!(project_name: 'Renovating the bathroom', user: user)
-bedroom_project = List.create!(project_name: 'Renovating the bedroom', user: user)
+bathroom_project = List.create!(project_name: 'Renovating the bathroom', user: user, project_item_count: 15)
+bedroom_project = List.create!(project_name: 'Renovating the bedroom', user: user, project_item_count: 12)
 
 # Showing the lists created
 # lists.each do |list|
@@ -500,7 +501,7 @@ tuck_tape_bedroom_project.save
 hammer = Tool.create(name: "hammer")
 wood = Material.create(name: "wood")
 
-picnic_table = SampleProject.create(title: "Picnic Table", level: "Easy", image:"Cloudinary", instructions: "1. do this; 2. do this 3. Do this;" )
+picnic_table = SampleProject.create(title: "Picnic Table", level: "Easy", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/65250-8848330_hazeno.jpg", instructions: "1. do this; 2. do this 3. Do this;" )
 SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: wood.id)
 SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: hammer.id)
 

@@ -1,7 +1,4 @@
 .project-card-container {
-  // width: 40%;
-  // border: 3px solid red;
-  border-radius: 10px;
   position: relative;
 }
 
@@ -10,26 +7,64 @@
 }
 .project-card-body {
   background-color: white;
-  display: flex;
+  position: relative;
   height: 53px;
   font-size: 20%;
   padding: 5px;
+  border-radius: 0 0 10px 10px;
+}
+
+.project-card-column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.project-card-body-name {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  margin-bottom: 0;
+  width: 60px;
+  font-size: 14px;
+  font-family: Anton;
 }
 
 .project-card-body-date-created {
-  text-align: right;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin-bottom: 0;
+  font-size: 8px;
+  font-family: Roboto;
 }
-// create another css text right for date
 .project-card-body-count {
-  text-align: bottom;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  margin-bottom: 0;
+  font-size: 10px;
+  font-family: Roboto;
 }
 
 .project-card-image {
   height: 100%;
   width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 
 .project-card-delete {
   position: absolute;
-  left: 20px;
+  left: 4px;
+  top: 3px;
+}
+
+.new-project-container {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='11' ry='11' stroke='%23333333FF' stroke-width='6' stroke-dasharray='20%2c 28' stroke-dashoffset='33' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 11px;
+  height: 272px;
+  display: flex;
+}
+.plus-icon {
+  margin: auto;
 }

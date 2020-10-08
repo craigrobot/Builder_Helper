@@ -2,7 +2,8 @@
   <div class="card">
     <% @sample_projects.each do |sample_project| %>
       <%= link_to(sample_project_path(sample_project)) do %>
-      <%= cl_image_tag("Watches/Rolex_Datejust_akxpza.jpg") %>
+        <%= image_tag(sample_project.image, size: "80x80") %>
+      <% end %>
     <% end %>
   </div>
 </div>
