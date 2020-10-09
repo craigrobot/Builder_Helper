@@ -1,30 +1,31 @@
-<div class="lists-page-container" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url(<%= image_path "background_image.jpg" %>);">
-  <% @lists.each do |list| %>
-    <% if @lists.length == 0 %>
-      <div>
+<div class="title-project-page" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url(<%= image_path "background_image.jpg" %>);">
+  <h1 class="project-title-text">My Projects</h1>
+  <div class="lists-page-container">
+    <% @lists.each do |list| %>
+      <% if @lists.length == 0 %>
+        <div class="new-project-container">
+          <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601756034/heroicons-solid_plus-sm_sk5ckm.svg" alt="">
+        </div>
+      <% end  %>
+      <div class="project-card-container">
+        <div class="project-card-header">
+          <%= link_to(new_list_item_list_path(list)) do %>
+            <%= image_tag "kitchen.jpg", class: "project-card-image"%>
+          <% end %>
+          <%= link_to( list_path(list), class: "project-card-delete", method: :delete, data: {confirm: "Are you sure you want to delete"}) do %>
+          <%= image_tag "delete_icon.png"%>
+          <% end %>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-body-name"><%= list.project_name.truncate(12) %></p>
+          <p class="project-card-body-count"><%= list.project_item_count %></p>
+          <p class="project-card-body-date-created"><%= list.created_at.strftime("%m/%e/%y")%></p>
+        </div>
       </div>
-      <div class="new-project-container">
-        <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601756034/heroicons-solid_plus-sm_sk5ckm.svg" alt="">
-      </div>
-    <% end  %>
-    <div class="project-card-container">
-      <div class="project-card-header">
-        <%= link_to(new_list_item_list_path(list)) do %>
-          <%= image_tag "kitchen.jpg", class: "project-card-image"%>
-        <% end %>
-        <%= link_to( list_path(list), class: "project-card-delete", method: :delete, data: {confirm: "Are you sure you want to delete"}) do %>
-        <%= image_tag "delete_icon.png"%>
-        <% end %>
-      </div>
-      <div class="project-card-body">
-        <p class="project-card-body-name"><%= list.project_name.truncate(12) %></p>
-        <p class="project-card-body-count"><%= list.project_item_count %></p>
-        <p class="project-card-body-date-created"><%= list.created_at.strftime("%m/%e/%y")%></p>
-      </div>
+    <% end %>
+    <div class="new-project-container">
+      <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601666956/Group_rd1vco.svg" alt="">
     </div>
-  <% end %>
-  <div class="new-project-container">
-    <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601666956/Group_rd1vco.svg" alt="">
   </div>
 </div>
 <%= render "new_project_popup" %>
