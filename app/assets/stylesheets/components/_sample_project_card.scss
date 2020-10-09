@@ -1,0 +1,30 @@
+.project-card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid #F6E172;
+  border-radius: 8px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.project-card {
+ display: flex;
+ width: 292px;
+ height: 175px;
+ justify-content: center;
+ align-items: center;
+ margin: 10px;
+ box-shadow: 0 4px 10px #8e8e8e;
+}
+
+.project-title {
+  font-family: $headers-font;
+  color: #F6E172;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 2px black;
+}
