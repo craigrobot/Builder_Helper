@@ -501,7 +501,11 @@ tuck_tape_bedroom_project.save
 hammer = Tool.create(name: "hammer")
 wood = Material.create(name: "wood")
 
-picnic_table = SampleProject.create(title: "Picnic Table", level: "Easy", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/65250-8848330_hazeno.jpg", instructions: "1. do this; 2. do this 3. Do this;" )
+spanish_tiles = SampleProject.create(title: "SPANISH TILES", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/65250-8848330_hazeno.jpg")
+vintage_cabinets = SampleProject.create(title: "VINTAGE CABINETS", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/french-vintage-kitchen-island-on-vintage-wool-rug_haamel.jpg")
+deck_storage = SampleProject.create(title: "DECK STORAGE", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/0906_cooper_7987_Edit.7_jaur2a.jpg")
+picnic_table = SampleProject.create(title: "PICNIC TABLE", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/iStock_515454363_saz5zf.jpg", level: "Easy", instructions: "1. do this; 2. do this 3. Do this;")
+
 SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: wood.id)
 SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: hammer.id)
 
