@@ -1,3 +1,5 @@
+require 'open-uri'
+
 puts 'Cleaning database...'
 
 ItemList.destroy_all
@@ -346,8 +348,17 @@ tuck_tape_rona.save
 #   puts "Item Store: #{item.store.name} - availability: #{item.availability} - #{item.price}$"
 # end
 
-bathroom_project = List.create!(project_name: 'Renovating the bathroom', user: user, project_item_count: 15)
-bedroom_project = List.create!(project_name: 'Renovating the bedroom', user: user, project_item_count: 12)
+bathroom_project = List.new(project_name: 'Bathroom', user: user, project_item_count: 15)
+bathroom_project_photo_file = URI.open("https://res.cloudinary.com/dnygdmomh/image/upload/v1602203203/Builder%20Helper/hbx030120bathroom-004-copy-1580336692_d3xbnp.jpg")
+bathroom_project.photo.attach(io: bathroom_project_photo_file, filename: 'hbx030120bathroom-004-copy-1580336692_d3xbnp')
+bathroom_project.user = user
+bathroom_project.save
+
+bedroom_project = List.new(project_name: 'Bedroom', user: user, project_item_count: 12)
+bedroom_project_photo_file = URI.open("https://res.cloudinary.com/dnygdmomh/image/upload/v1602203200/Builder%20Helper/PastedGraphic-5-copy-970x610_znfx1t.jpg")
+bedroom_project.photo.attach(io: bedroom_project_photo_file, filename: 'PastedGraphic-5-copy-970x610_znfx1t')
+bedroom_project.user = user
+bedroom_project.save
 
 # Showing the lists created
 # lists.each do |list|

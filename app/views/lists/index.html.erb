@@ -10,10 +10,14 @@
     <div class="project-card-container">
       <div class="project-card-header">
         <%= link_to(new_list_item_list_path(list)) do %>
-          <%= image_tag "kitchen.jpg", class: "project-card-image"%>
-        <% end %>
-        <%= link_to( list_path(list), class: "project-card-delete", method: :delete, data: {confirm: "Are you sure you want to delete"}) do %>
-        <%= image_tag "delete_icon.png"%>
+          <% if list.photo.key? %>
+            <%= cl_image_tag list.photo.key %>
+          <% else %>
+            <%= cl_image_tag("https://res.cloudinary.com/dnygdmomh/image/upload/v1602203683/Builder%20Helper/home_rennovation_wedyzi.jpg") %>
+          <% end %>
+          <%= link_to( list_path(list), class: "project-card-delete", method: :delete, data: {confirm: "Are you sure you want to delete"}) do %>
+            <%= image_tag "delete_icon.png"%>
+          <% end %>
         <% end %>
       </div>
       <div class="project-card-body">
