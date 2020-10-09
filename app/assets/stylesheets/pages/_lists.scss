@@ -2,11 +2,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10%;
-  row-gap: 2%;
   width: 100%;
   padding: 15px;
+}
+
+.title-project-page {
   background-position: center;
   background-size: cover;
   overflow-y: scroll;
   min-height: calc(100vh - 63px - 71px);
+  text-align: center;
+}
+
+.project-title-text {
+  text-align: center;
+  font-family: "Anton", "Helvetica", "sans-serif";
+  font-size: 24px;
+  margin-top: 20px;
 }
