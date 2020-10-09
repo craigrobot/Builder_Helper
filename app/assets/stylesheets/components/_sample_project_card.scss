@@ -1,4 +1,4 @@
-.project-card-container {
+.sample-project-card-container {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -12,13 +12,13 @@
 }
 
 .project-card {
- display: flex;
- width: 292px;
- height: 175px;
- justify-content: center;
- align-items: center;
- margin: 10px;
- box-shadow: 0 4px 10px #8e8e8e;
+  display: flex;
+  width: 292px;
+  height: 175px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  box-shadow: 0 4px 10px #8e8e8e;
 }
 
 .project-title {
