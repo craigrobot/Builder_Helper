@@ -1,12 +1,14 @@
 <div class="title-project-page" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url(<%= image_path "background_image.jpg" %>);">
   <h1 class="project-title-text">My Projects</h1>
   <div class="lists-page-container">
-    <% @lists.each do |list| %>
-      <% if @lists.length == 0 %>
-        <div class="new-project-container">
-          <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601756034/heroicons-solid_plus-sm_sk5ckm.svg" alt="">
-        </div>
-      <% end  %>
+    <% if @lists.length == 0 %>
+      <div>
+      </div>
+      <div class="new-project-container">
+        <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601756034/heroicons-solid_plus-sm_sk5ckm.svg" alt="">
+      </div>
+    <% end %>
+    <% @lists.each_with_index do |list, index| %>
       <div class="project-card-container">
         <div class="project-card-header">
           <%= link_to(new_list_item_list_path(list)) do %>
@@ -22,10 +24,12 @@
           <p class="project-card-body-date-created"><%= list.created_at.strftime("%m/%e/%y")%></p>
         </div>
       </div>
+      <% if index == 0 %>
+        <div class="new-project-container">
+          <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601666956/Group_rd1vco.svg" alt="">
+        </div>
+      <% end %>
     <% end %>
-    <div class="new-project-container">
-      <img class="plus-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601666956/Group_rd1vco.svg" alt="">
-    </div>
   </div>
 </div>
 <%= render "new_project_popup" %>

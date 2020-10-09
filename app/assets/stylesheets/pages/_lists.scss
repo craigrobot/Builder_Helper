@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10%;
-  row-gap: 10%;
   width: 100%;
   padding: 15px;
 }
@@ -11,6 +10,7 @@
   background-position: center;
   background-size: cover;
   overflow-y: scroll;
+  min-height: calc(100vh - 63px - 71px);
   text-align: center;
 }
 

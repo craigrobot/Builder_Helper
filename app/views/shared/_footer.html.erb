@@ -1,6 +1,6 @@
 <div class="footer-container">
   <% if controller_name == "lists" && action_name == "index" %>
-    <%= link_to root_path, class: "footer-icon-container" do %>
+    <%= link_to lists_path, class: "footer-icon-container" do %>
       <img class="footer-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601427457/bytesize_home_smjxzq.svg" alt="">
       <span class="text-yellow">PROJECTS</span>
     <% end %>
@@ -10,10 +10,19 @@
       <span class="text-grey">PROJECTS</span>
     <% end %>
   <% end %>
-  <div class="footer-icon-container">
-    <img class="footer-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601425799/ion_hammer-outline_1_kosz0b.svg" alt="">
-    <span>DIY</span>
-  </div>
+
+  <% if controller_name == "sample_projects" && action_name == "index" %>
+    <%= link_to sample_projects_path, class: "footer-icon-container" do %>
+      <img class="footer-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1602204457/ion_hammer-outline_1_jbycyp.svg" alt="">
+      <span class="text-yellow">DIY</span>
+    <% end  %>
+  <% else %>
+    <%= link_to sample_projects_path, class: "footer-icon-container" do %>
+      <img class="footer-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601425799/ion_hammer-outline_1_kosz0b.svg" alt="">
+      <span class="text-grey">DIY</span>
+    <% end %>
+  <% end %>
+
   <div class="footer-icon-container">
     <img class="footer-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601426722/cil_map_pghxgm.svg" alt="">
     <span>FIND STORE</span>
