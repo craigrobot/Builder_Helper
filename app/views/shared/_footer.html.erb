@@ -16,6 +16,11 @@
       <img class="footer-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1602204457/ion_hammer-outline_1_jbycyp.svg" alt="">
       <span class="text-yellow">DIY</span>
     <% end  %>
+  <% elsif controller_name == "sample_projects" && action_name == "show" %>
+    <%= link_to sample_projects_path, class: "footer-icon-container" do %>
+      <img class="footer-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1602204457/ion_hammer-outline_1_jbycyp.svg" alt="">
+      <span class="text-yellow">DIY</span>
+    <% end  %>
   <% else %>
     <%= link_to sample_projects_path, class: "footer-icon-container" do %>
       <img class="footer-icon" src="https://res.cloudinary.com/dwitqft8h/image/upload/v1601425799/ion_hammer-outline_1_kosz0b.svg" alt="">
