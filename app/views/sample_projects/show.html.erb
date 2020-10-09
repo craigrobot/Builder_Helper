@@ -1,2 +1,102 @@
-<h1>SampleProjects#show</h1>
-<p>Find me in app/views/sample_projects/show.html.erb</p>
+<% if @sample_project.title == "PICNIC TABLE" %>
+<div class="sample-project-card-container">
+  <div class="project-card" style="background-image: url(https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/iStock_515454363_saz5zf.jpg); background-size: cover;">
+    <div class="project-title"><%= @sample_project.title %></div>
+  </div>
+
+  <div class="instructions-container">
+    <h2>Instructions</h2>
+    <div class="instructions-text">
+      <div class="tabletop">
+        <p><b>Make the Tabletop</b></p>
+          <p>
+            1. Place spacers between the tabletop slats and clamp the slats together.<br>
+            2. Place the table supports on the slats. Place the end table supports 7 inches from the end of the table. Place the middle table support flat and centered.<br>
+            3. Drill through the supports with a combination countersink bit. Drill deep enough to set the wood screw heads below the surface.<br>
+            4. Using a drill, screw the two outermost slats to one another. You may need to move the support later in the construction.<br>
+            5. Screw the two end table supports to the slats with No. 8, 4-inch deck screws.<br>
+            6. Attach the center table support to the slats with No. 8, 2 1/2-inch deck screws.
+          </p>
+          <br>
+      </div>
+      <div class="leg-corners">
+        <p><b>Cut Off Leg Corners</b></p>
+          <p>
+            1. Mark a point 1-1/2-inches from the outside edge of the bottom of each leg. Cut off the corner.<br>
+            2. Butt a combination square against the end of a leg. Draw a line from the point to the outside edge. Cut off the corner.<br>
+          </p>
+          <br>
+      </div>
+      <div class="attach-legs">
+        <p><b>Attach Legs</b></p>
+          <p>
+            1. Clamp the legs to the outside faces of the end table supports. Butt together their inside edges at the gap between the center slats. After clamping the legs, use two 3-inch carriage bolts to attach them.<br>
+            2. Counter bore a hole for a washer and nut.<br>
+            3. Drill clearance holes the same diameter as the bolt shanks.<br>
+            4. Slide each bolt into its hole, add a washer and tighten the nut.<br>
+          </p>
+          <br>
+      </div>
+      <div class="make-bench-supports">
+        <p><b>Make Bench Supports</b></p>
+          <p>
+            1. Mark the position of the bench supports on the legs by laying one arm of a framing square on the tabletop.<br>
+            2. Measure up 13 1/2-inches on the other arm. Hold a straightedge across the square. Mark the inside face of the legs.<br>
+            3. Miter-cut the ends of the bench supports to 60-degree angles.<br>
+            4. Drill holes on the outside face of each leg to clamp the bench supports to the legs.<br>
+            5. Clamp the bench supports to the inside of the legs. Align them with the mark on each leg and center them across the table’s width.<br>
+            6. Drill four holes on the outside face of each leg. Fasten the bench supports with 3-inch carriage bolts.<br>
+          </p>
+          <br>
+      </div>
+      <div class="table-support-braces">
+        <p><b>Put in Table Support Braces</b></p>
+          <p>
+            1. Mark parallel 60-degree angles on each end of the 2 x 4 braces.<br>
+            2. Use the circular saw to cut the angles.<br>
+            3. Lay out a right-angled notch at one end of each brace to fit the center table support.<br>
+            4. Measure 2 1/4-inches on the edge of the brace that has just been cut and mark.<br>
+            5. Measure 1 3/4-inches deep from that mark. Make the notch lines with a combination square. Cut the notch with a saber saw.<br>
+            6. Put the braces in place. Trim off any part that sticks out beyond the bench edge.<br>
+            7. Drill pilot holes on each brace and then drive in the screws.<br>
+            8. Test-fit the braces. Adjust the notch using sandpaper or chisel it until it fits. If necessary, move the leg assembly.<br>
+            9. Drill pilot holes at each end.<br>
+            10. Drive in No. 8, 3-inch deck screws.<br>
+          </p>
+          <br>
+      </div>
+      <div class="make-benches">
+        <p><b>Make Benches</b></p>
+          <p>
+            1. Separate each pair of bench slats with 1/4-inch spacers. Clamp each assembly together.<br>
+            2. Cut the two bench cleats to size. Make a 60-degree bevel at each end. Place the bench cleats at the center of the bench slats. Drill holes on the bench cleats.<br>
+            3. Drill holes into the slats with a combination countersink bit.<br>
+            4. Drive in No. 8, 2 1/2-inch deck screws.<br>
+            5. Drill holes with a combination countersink bit for 4-inch deck screws.<br>
+            6. Screw the bench supports to the benches.<br>
+          </p>
+        <br>
+      </div>
+      <div class="curve-table">
+        <p><b>Curve Table & Bench Ends</b></p>
+          <p>
+            1. Bore a hole for a pencil into a 6-foot 1-inch x 2-inch board.<br>
+            2. Clamp a wood strip across the tabletop 10 inches from one end.<br>
+            3. Nail a 1-inch x 2-inch to the wood strip, loose enough to pivot. Pivot it, marking the arc.<br>
+            4. Repeat these instructions to draw a curved edge on the other end of the table.<br>
+            5. Use a saber saw to cut the curved edges of the tabletop.<br>
+            6. Repeat above to make a similar curve at each end of each bench.<br>
+          </p>
+          <br>
+      </div>
+      <div class="sand-stain">
+        <p><b>Sand & Stain</b></p>
+          <p>
+            1. Use a hand or belt sander to smooth all rough edges. Pay close attention with your sander to the tabletop and the top of the benches.<br>
+            2. Stain your DIY picnic table with a weather-resistant polyurethane.<br>
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
