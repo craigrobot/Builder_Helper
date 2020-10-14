@@ -8,10 +8,21 @@
   justify-content: center;
   padding-top: 25px;
   padding-bottom: 25px;
+  position: relative;
 
   .project-card {
     margin: 10px auto 10px auto;
   }
+
+  #level {
+    margin-left: 32px;
+  }
+}
+
+.level-icon {
+  position: absolute;
+  top: 250px;
+  left: 20px;
 }
 
 
@@ -46,3 +57,4 @@
   letter-spacing: 0.1em;
   text-shadow: 2px 2px 2px black;
 }
+
