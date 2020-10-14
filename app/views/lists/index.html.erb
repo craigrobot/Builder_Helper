@@ -11,7 +11,7 @@
       <div class="project-card-header">
         <%= link_to(new_list_item_list_path(list)) do %>
           <% if list.photo.key? %>
-            <%= cl_image_tag list.photo.key %>
+            <%= cl_image_tag(list.photo.key, crop: :fill, class: "project-card-image") %>
           <% else %>
             <%= cl_image_tag("https://res.cloudinary.com/dnygdmomh/image/upload/v1602203683/Builder%20Helper/home_rennovation_wedyzi.jpg") %>
           <% end %>
