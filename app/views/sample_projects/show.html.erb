@@ -1,7 +1,29 @@
 <% if @sample_project.title == "PICNIC TABLE" %>
+
 <div class="sample-project-card-container">
   <div class="project-card" style="background-image: url(https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/iStock_515454363_saz5zf.jpg); background-size: cover;">
     <div class="project-title"><%= @sample_project.title %></div>
+  </div>
+  <div class="instructions-container">
+    <h2>Tools</h2>
+    <div class="instructions-text">
+      <% @sample_project.tools.each do |tool| %>
+        <p><%= tool.name %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="instructions-container">
+    <h2>Materials</h2>
+    <div class="instructions-text">
+      <% @sample_project.sample_project_materials.each do |sample_project_material| %>
+        <% if sample_project_material.count.nil? || sample_project_material.count == 1 %>
+        <p><%= sample_project_material.material.name %></p>
+          <% else %>
+          <p><%= sample_project_material.count %> x <%= sample_project_material.material.name %></p>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 
   <div class="instructions-container">

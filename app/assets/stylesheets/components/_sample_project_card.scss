@@ -6,10 +6,28 @@
   border-radius: 8px;
   margin: 20px;
   justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  .project-card {
+    margin: 10px auto 10px auto;
+  }
+}
+
+
+.sample-projects-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid #F6E172;
+  border-radius: 8px;
+  margin: 20px;
+  justify-content: center;
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
 }
+
 
 .project-card {
   display: flex;
