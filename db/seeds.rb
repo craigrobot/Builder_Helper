@@ -509,8 +509,6 @@ tuck_tape_bedroom_project.list = bedroom_project
 tuck_tape_bedroom_project.item = tuck_tape
 tuck_tape_bedroom_project.save
 
-hammer = Tool.create(name: "hammer")
-
 circular_saw = Tool.create(name: "Circular Saw")
 power_drill = Tool.create(name: "Power Drill")
 clamps = Tool.create(name: "Clamps")
@@ -520,23 +518,40 @@ paint_brush = Tool.create(name: "Paint Brush")
 sander = Tool.create(name: "Sander")
 
 
-tabletop_slats = Material.create(name: "Tabletop Slats: 1 1/2 x 7 1/4 x 72 inches")
-bench_slats = Material.create(name: "Bench Slats: 1 1/2 x 5 1/2 x 68 inches")
+tabletop_slats = Material.create(name: "Tabletop Slats: 1 1/2 x 7 1/4 x 72")
+bench_slats = Material.create(name: "Bench Slats: 1 1/2 x 5 1/2 x 68")
 table_legs = Material.create(name: "Table Legs: 1 1/2 x 5 1/2 x 40 1/2 inches")
-center_table_support = Material.create(name: "Center Table Support: 1 1/2 x 3 1/2 x 28 3/4 inches")
-end_table_supports = Material.create(name: "End Table Supports: 1 1/2 x 3 1/2 x 28 3/4 inches")
-bench_supports = Material.create(name: "Bench Supports: 1 1/2 x 3 1/2 x 61 inches")
-braces = Material.create(name: "Braces: 1 1/2 x 3 1/2 x 30 3/4 inches")
-bench_cleats = Material.create(name: "Bench Cleats: 1 1/2 x 3 1/2 x 10 inches")
-wood_glue = Material.create(name: "wood glue")
-wood_screws = Material.create(name: "wood screws")
+center_table_support = Material.create(name: "Center Table Support: 1 1/2 x 3 1/2 x 28 3/4")
+end_table_supports = Material.create(name: "End Table Supports: 1 1/2 x 3 1/2 x 28 3/4")
+bench_supports = Material.create(name: "Bench Supports: 1 1/2 x 3 1/2 x 61")
+braces = Material.create(name: "Braces: 1 1/2 x 3 1/2 x 30 3/4")
+bench_cleats = Material.create(name: "Bench Cleats: 1 1/2 x 3 1/2 x 10")
+wood_glue = Material.create(name: "Wood Glue")
+wood_screws = Material.create(name: "Wood Screws")
 
 spanish_tiles = SampleProject.create(title: "SPANISH TILES", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/65250-8848330_hazeno.jpg")
 vintage_cabinets = SampleProject.create(title: "VINTAGE CABINETS", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/french-vintage-kitchen-island-on-vintage-wool-rug_haamel.jpg")
 deck_storage = SampleProject.create(title: "DECK STORAGE", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/0906_cooper_7987_Edit.7_jaur2a.jpg")
 picnic_table = SampleProject.create(title: "PICNIC TABLE", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/iStock_515454363_saz5zf.jpg", level: "Level", instructions: "1. do this; 2. do this 3. Do this;")
 
-SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: wood.id)
-SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: hammer.id)
+SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: wood_screws.id)
+SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: wood_glue.id)
+SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: bench_cleats.id)
+SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: braces.id)
+SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: bench_supports.id)
+SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: end_table_supports.id)
+SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: center_table_support.id)
+SampleProjectMaterial.create(count: 4, sample_project_id: picnic_table.id, material_id: table_legs.id)
+SampleProjectMaterial.create(count: 4, sample_project_id: picnic_table.id, material_id: bench_slats.id)
+SampleProjectMaterial.create(count: 4, sample_project_id: picnic_table.id, material_id: tabletop_slats.id)
+
+SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: circular_saw.id)
+SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: power_drill.id)
+SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: clamps.id)
+SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: jig_saw.id)
+SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: screwdriver.id)
+SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: paint_brush.id)
+SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: sander.id)
+
 
 puts 'Data created!'

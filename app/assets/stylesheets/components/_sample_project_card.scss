@@ -6,10 +6,39 @@
   border-radius: 8px;
   margin: 20px;
   justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+
+  .project-card {
+    margin: 10px auto 10px auto;
+  }
+
+  #level {
+    margin-left: 32px;
+  }
+}
+
+.level-icon {
+  position: absolute;
+  top: 250px;
+  left: 20px;
+}
+
+
+.sample-projects-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid #F6E172;
+  border-radius: 8px;
+  margin: 20px;
+  justify-content: center;
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
 }
+
 
 .project-card {
   display: flex;
@@ -28,3 +57,4 @@
   letter-spacing: 0.1em;
   text-shadow: 2px 2px 2px black;
 }
+

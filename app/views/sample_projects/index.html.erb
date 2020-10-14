@@ -1,4 +1,4 @@
-<div class="sample-project-card-container">
+<div class="sample-projects-container">
   <% @sample_projects.each do |sample_project| %>
     <div class="project-card" style="background-image: url(<%= sample_project.image %>); background-size: cover;">
       <%= link_to(sample_project_path(sample_project)) do %>
