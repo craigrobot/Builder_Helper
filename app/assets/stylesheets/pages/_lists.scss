@@ -2,11 +2,23 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 10%;
-  row-gap: 10%;
   width: 100%;
   padding: 15px;
+}
+
+.title-project-page {
   background-position: center;
   background-size: cover;
   overflow-y: scroll;
-  height: 84vh
+  min-height: calc(100vh - 63px - 71px);
+  text-align: center;
+}
+
+.project-title-text {
+  text-align: center;
+  font-family: "Anton", "Helvetica", "sans-serif";
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333333;
+  letter-spacing: 0.1em;
 }
