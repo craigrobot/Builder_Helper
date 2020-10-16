@@ -348,6 +348,12 @@ tuck_tape_rona.save
 #   puts "Item Store: #{item.store.name} - availability: #{item.availability} - #{item.price}$"
 # end
 
+bathroom_project = List.new(project_name: 'Bathroom', user: user, project_item_count: 15)
+bathroom_project_photo_file = URI.open("https://res.cloudinary.com/dnygdmomh/image/upload/v1602203203/Builder%20Helper/hbx030120bathroom-004-copy-1580336692_d3xbnp.jpg")
+bathroom_project.photo.attach(io: bathroom_project_photo_file, filename: 'hbx030120bathroom-004-copy-1580336692_d3xbnp')
+bathroom_project.user = user
+bathroom_project.save
+
 bedroom_project = List.new(project_name: 'Bedroom', user: user, project_item_count: 12)
 bedroom_project_photo_file = URI.open("https://res.cloudinary.com/dnygdmomh/image/upload/v1602203200/Builder%20Helper/PastedGraphic-5-copy-970x610_znfx1t.jpg")
 bedroom_project.photo.attach(io: bedroom_project_photo_file, filename: 'PastedGraphic-5-copy-970x610_znfx1t')
@@ -547,5 +553,6 @@ SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: screwdrive
 SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: paint_brush.id)
 SampleProjectTool.create(sample_project_id: picnic_table.id, tool_id: sander.id)
 
+List.first.destroy
 
 puts 'Data created!'
