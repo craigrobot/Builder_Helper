@@ -12,6 +12,10 @@
     &.modal-hidden {
       z-index: -1;
     }
+
+    &.modal-fade-in {
+      animation: fadeIn 0.3s ease-out;
+    }
 }
 
 .container-create-project-popup {
@@ -80,5 +84,22 @@
 }
 
 .modal-hidden {
+  opacity: 0;
+}
+
+
+#list_photo {
+  font-family: Roboto;
+  color: grey;
+  padding: 10px;
+}
+
+@keyframes fadeIn {
+  0% {
     opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
