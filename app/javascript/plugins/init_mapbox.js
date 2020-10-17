@@ -17,7 +17,7 @@ const initMapbox = () => {
     });
 
     const markers = JSON.parse(mapElement.dataset.markers);
-    
+
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
 
@@ -26,6 +26,16 @@ const initMapbox = () => {
         .setPopup(popup)
         .addTo(map);
     });
+    const currentLocation = JSON.parse(mapElement.dataset.currentLocation);
+    const element = document.createElement('div');
+    element.className = 'marker';
+    element.style.backgroundImage = `url('${mapElement.dataset.markerUrl}')`;
+    element.style.backgroundSize = 'contain';
+    element.style.width = '25px';
+    element.style.height = '25px';
+    new mapboxgl.Marker(element)
+        .setLngLat(currentLocation)
+        .addTo(map);
     fitMapToMarkers(map, markers)
   }
 };
