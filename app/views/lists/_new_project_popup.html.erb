@@ -2,7 +2,7 @@
   <div class="container-create-project-popup">
     <%= simple_form_for(@list) do |f| %>
       <%= f.input :project_name, placeholder: "Name...", class: "new-project-name", label: "New Project" %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, as: :file, class: "image-button" %>
       <div class="button-container">
         <%= link_to "Cancel", lists_path, class: "btn btn-outline-primary new-project-button-left" %>
         <%= f.submit "Create", class: "btn btn-outline-primary new-project-button-right" %>

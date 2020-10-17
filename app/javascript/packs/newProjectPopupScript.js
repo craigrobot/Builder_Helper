@@ -11,6 +11,7 @@ const modalTrigger = document.querySelector(".plus-icon");
     modalTrigger.addEventListener("click", (event) => {
       console.log(modal.classList)
       modal.classList.remove('modal-hidden');
+      modal.classList.add('modal-fade-in');
     })
   }
 }
