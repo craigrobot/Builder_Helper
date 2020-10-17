@@ -530,9 +530,9 @@ wood_glue = Material.create(name: "Wood Glue")
 wood_screws = Material.create(name: "Wood Screws")
 
 picnic_table = SampleProject.create(title: "PICNIC TABLE", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/iStock_515454363_saz5zf.jpg", level: "Level", instructions: "1. do this; 2. do this 3. Do this;")
+deck_storage = SampleProject.create(title: "DECK STORAGE", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/0906_cooper_7987_Edit.7_jaur2a.jpg")
 spanish_tiles = SampleProject.create(title: "SPANISH TILES", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/65250-8848330_hazeno.jpg")
 vintage_cabinets = SampleProject.create(title: "VINTAGE CABINETS", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/french-vintage-kitchen-island-on-vintage-wool-rug_haamel.jpg")
-deck_storage = SampleProject.create(title: "DECK STORAGE", image: "https://res.cloudinary.com/dwitqft8h/image/upload/v1602195964/0906_cooper_7987_Edit.7_jaur2a.jpg")
 
 SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: wood_screws.id)
 SampleProjectMaterial.create(sample_project_id: picnic_table.id, material_id: wood_glue.id)
